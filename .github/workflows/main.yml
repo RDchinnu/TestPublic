@@ -10,8 +10,8 @@ jobs:
   print-message:
     runs-on: ubuntu-latest
     steps:
-      name: print welcome message
-      run: echo 'welcome to github action'
+      - name: print welcome message
+        run: echo 'welcome to github action'
 
-      name: print hello message
-      run: echo 'hello...'
+      - name: print hello message
+        run: echo 'hello...'
