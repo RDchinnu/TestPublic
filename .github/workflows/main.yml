@@ -1,5 +1,5 @@
 #pipeline name/workflow name
-name: First workflow
+name: csv file validator
 
 #set trigger
 on:
@@ -11,11 +11,14 @@ on:
 
 #create jobs
 jobs:
-  print-message:
+  validate-file:
     runs-on: ubuntu-latest
     steps:
-      - name: print welcome message
-        run: echo 'welcome to github action'
+      - name: checkout code / download code
+        uses: actions/checkout@v7
 
-      - name: print hello message
-        run: echo 'hello...'
+      - name: run validate employee.csv
+        run: python validate_employee.csv
+
+      - name: move data to target
+        run: echo 'move data'
