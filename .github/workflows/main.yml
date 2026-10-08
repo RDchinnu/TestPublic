@@ -17,8 +17,8 @@ jobs:
       - name: checkout code / download code
         uses: actions/checkout@v7
 
-      - name: run validate employee.csv
-        run: python validate_employee.csv
+      - name: run validate employee
+        run: python validate_employee.py
 
       - name: move data to target
         run: echo 'move data'
