@@ -1,5 +1,5 @@
 id,name,city,salary
 1,A,pune,40000
-2,B,pune,-10000
-,C,pune,40000
+2,B,pune,10000
+3,C,pune,140000
 4,D,pune,40000
