@@ -6,8 +6,6 @@ on:
   push:
     branches:
       - main
-  
-  workflow_dispatch:
 
 #create jobs
 jobs:
@@ -17,8 +15,8 @@ jobs:
       - name: checkout code / download code
         uses: actions/checkout@v7
 
-      - name: run validate employee
-        run: python validate_employee.py
-
-      - name: move data to target
-        run: echo 'move data'
+      - name: run read program
+        env:
+          USERNAME_ENV: ${{secrets.USERNAME}}
+          PASSWORD_ENV: ${{secrets.PASSWORD}}
+        run: python read.py
